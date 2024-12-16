@@ -7,6 +7,7 @@ from langserve import add_routes
 from dotenv import load_dotenv
 load_dotenv()
 
+st.secrets["GROQ_API_KEY"]
 groq_api_key=os.getenv("GROQ_API_KEY")
 model=ChatGroq(model="llama3-70b-8192",groq_api_key=groq_api_key)
 
